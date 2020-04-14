@@ -50,16 +50,11 @@ else
 
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-//quizWindow.remove(image);
+quizWindow.remove(image);
 
 		// 10. find another image and create it (might take more than one line
 		// of code)
-//String imageUrl2="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pcmag.com%2Freviews%2Fapple-ipad-2019&psig=AOvVaw2P2kVQGQis1wmZ_TpYk9PV&ust=1586313350009000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMilz_Gj1egCFQAAAAAdAAAAABAS";
 
-//Component image2 = loadImage("ipad.png"); 
-
-
-//loadImage(imageUrl2);
 		// 11. add the second image to the quiz window
 
 		// 12. pack the quiz window
@@ -67,6 +62,28 @@ else
 		// 13. ask another question
 
 		// 14+ check answer, say if correct or incorrect, etc.
+
+
+String imageUrl2= "https://www.topcoder.com/wp-content/uploads/2020/03/covid-19-updates.jpg";
+
+//"https://cdn.guidingtech.com/imager/assets/247482/google-photos-to-icloud-14_40dd5eab97016030a3870d712fd9ef0f.jpg?1575355684";
+
+Component image2=loadImage(imageUrl2);
+
+quizWindow.add(image2);
+
+quizWindow.pack();
+
+String ans2 =JOptionPane.showInputDialog(" does this next picture has something to do with coronavirus. this is yes or no question");
+if(ans2.equalsIgnoreCase("yes")) {
+JOptionPane.showMessageDialog(null,"Correct");
+}
+else
+{
+JOptionPane.showMessageDialog(null, "Incorrect");
+}
+
+
 
 	}
 
