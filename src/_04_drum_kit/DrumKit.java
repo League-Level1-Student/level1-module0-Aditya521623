@@ -31,6 +31,7 @@ JFrame frame = new JFrame();
 		// 2. Make the frame visible and
 		// set its default close operation to JFrame.EXIT_ON_CLOSE
 frame.setVisible(true);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 3. Set the size of the frame
 frame.setSize(10, 15);
 		// 4. Set the title of the frame
@@ -64,6 +65,8 @@ frame.pack();
 		// 13. add this mouse listener to drumLabelWithImage 
 drumLabelWithImage.addMouseListener(this);
 
+cymbalLabelWithImage.addMouseListener(this);
+
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
 
@@ -80,15 +83,22 @@ drumLabelWithImage.addMouseListener(this);
 		// 15. Download a drum sound and drop it into your "default package".
 		// You can find it on freesound.org. To download it, log in as
 		// leagueofamazing/code4life.
+		if(drumClicked.equals(drumLabelWithImage)) {
+			playSound("drum.wav");
+		}
+		else
+		{
+			playSound("cymbal.wav");
+		}
 
 		// 16. If they clicked on the drumImage...
-        if(e.getComponent().equals(drumLabelWithImage)) {
+        
         	
         }
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works
 
-	}
+	
 
 	private JLabel createLabelImage(String fileName) throws MalformedURLException {
 		URL imageURL = getClass().getResource(fileName);
@@ -109,7 +119,6 @@ drumLabelWithImage.addMouseListener(this);
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		playSound("drum.wav");
 	}
 
 	@Override
