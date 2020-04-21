@@ -62,7 +62,17 @@ frame.setTitle("Demanding Buttons");
 			rightButton.setPreferredSize(BIG);
 			rightButton.setText("no, click me");
 			leftButton.setPreferredSize(SMALL);
+			leftButton.setText("yay");
 			
+		}
+		
+		if(buttonPressed.equals(rightButton)) {
+			
+			leftButton.setPreferredSize(BIG);
+			leftButton.setText("no click me");
+			rightButton.setPreferredSize(SMALL);
+			rightButton.setText("click me");
+			rightButton.setText("yay");
 		}
 		
 		/* If the buttonPressed was the leftButton.... */
